@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed"
+    },
+    {
+      "item": "testmod:weed"
+    },
+    {
+      "item": "testmod:weed"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "item": "testmod:joint",
+    "count": 1
+  }
+}

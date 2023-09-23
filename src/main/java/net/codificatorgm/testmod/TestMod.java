@@ -1,6 +1,7 @@
 package net.codificatorgm.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,7 @@ public class TestMod {
         // Register the commonSetup method for modloading
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
@@ -45,8 +47,11 @@ public class TestMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.WEED);
+            event.accept(ModItems.WEED_LEAF);
             event.accept(ModItems.JOINT);
+            event.accept(ModBlocks.WEED_BLOCK);
+            event.accept(ModItems.WEED_SEEDS);
+            event.accept(ModItems.WEED_BUD);
         }
 
     }

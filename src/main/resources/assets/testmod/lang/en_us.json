@@ -1,4 +1,7 @@
 {
-  "item.testmod.weed": "Weed",
-  "item.testmod.joint": "Joint"
+  "item.testmod.weed_leaf": "Weed Leaf",
+  "item.testmod.joint": "Joint",
+  "item.testmod.weed_seeds": "Weed Seed",
+  "item.testmod.weed_bud": "Weed Bud",
+  "block.testmod.weed_block": "Weed Block"
 }

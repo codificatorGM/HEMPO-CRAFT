@@ -9,6 +9,8 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
+import java.util.Properties;
+
 public class WeedCropBlock extends CropBlock {
     public static final int MAX_AGE = 5;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
@@ -19,11 +21,12 @@ public class WeedCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
+
         return ModItems.WEED_SEEDS.get();
     }
 
     @Override
-    protected IntegerProperty getAgeProperty() {
+    public IntegerProperty getAgeProperty() {
         return AGE;
     }
 

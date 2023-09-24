@@ -2,17 +2,18 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
+    "S": {
       "item": "testmod:weed_leaf"
     }
   },
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "SSS",
+    "SSS",
+    "SSS"
   ],
   "result": {
-    "item": "testmod:weed_block",
-    "count": 4
-  }
+    "count": 4,
+    "item": "testmod:weed_block"
+  },
+  "show_notification": true
 }

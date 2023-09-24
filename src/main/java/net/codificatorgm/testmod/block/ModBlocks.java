@@ -3,15 +3,15 @@
 package net.codificatorgm.testmod.block;
 
 import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.testmod.block.custom.WeedCropBlock;
 import net.codificatorgm.testmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.CherryLeavesBlock;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,7 +24,11 @@ public class ModBlocks {
            DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MOD_ID);
 
     public static final RegistryObject<Block> WEED_BLOCK = registerBlock("weed_block",
-            () -> new CherryLeavesBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_LEAVES)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> WEED_CROP = registerBlock("weed_crop",
+            () -> new WeedCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

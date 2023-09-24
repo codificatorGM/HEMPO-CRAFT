@@ -4,6 +4,7 @@ import net.codificatorgm.testmod.TestMod;
 import net.codificatorgm.testmod.block.ModBlocks;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,7 +25,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.JOINT)));
 
     public static final RegistryObject<Item> WEED_SEEDS = ITEMS.register("weed_seeds",
-            () -> new Item(new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.WEED_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus){
 

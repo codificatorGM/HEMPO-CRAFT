@@ -1,2 +1,5 @@
-// 1.20.1	2023-09-24T00:24:42.7668578	Tags for minecraft:block mod id testmod
-5cd298e57e1655ac935d6233f2e4f5581edf6c40 data/minecraft/tags/blocks/mineable/hoe.json
+// 1.20.1	2023-09-24T15:27:36.089584	Tags for minecraft:block mod id testmod
+f9be974c020ba6d04ed98120c502d48b8fed0997 data/minecraft/tags/blocks/fences.json
+5f27ca7547c598b9b25b271a328a4e3e2fc202e1 data/minecraft/tags/blocks/fence_gates.json
+d5f34c7d6a09d2a67a04d0bbed2986b6b4348c7a data/minecraft/tags/blocks/mineable/axe.json
+45ccae710ec59b39a546bf56467ed8cce71b6413 data/minecraft/tags/blocks/mineable/hoe.json

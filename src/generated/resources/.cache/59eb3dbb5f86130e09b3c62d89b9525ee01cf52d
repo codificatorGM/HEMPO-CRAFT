@@ -1,3 +1,12 @@
-// 1.20.1	2023-09-24T02:49:30.0473583	Loot Tables
-b4ab5edb1f44e9611e32e5902eabe1bfcaab43f7 data/testmod/loot_tables/blocks/weed_block.json
+// 1.20.1	2023-09-24T15:27:36.0915834	Loot Tables
+4c8353c6bb4e18118966275ab523997776f3798a data/testmod/loot_tables/blocks/hemp_block.json
+b60f786d0ab0b9cb18efd3d519c5d2068b14870f data/testmod/loot_tables/blocks/hemp_button.json
+35093e14a2b9a74aa709de73b48bb163c675662c data/testmod/loot_tables/blocks/hemp_door.json
+f19c6b9f9232c2c667738255df4856f25ba77cf4 data/testmod/loot_tables/blocks/hemp_fence.json
+98a12d070ea5ddcd5940f445ae8e5c8102d19209 data/testmod/loot_tables/blocks/hemp_fence_gate.json
+38f8b668afb9e93f5cd503cab95b5adb9ef01787 data/testmod/loot_tables/blocks/hemp_pressure_plate.json
+dc099569d5e1dfc70ac657e056f965983115fe2c data/testmod/loot_tables/blocks/hemp_slab.json
+dc5917ecabc63d7cd193d85ec088290e8e40be86 data/testmod/loot_tables/blocks/hemp_stairs.json
+044c328f7912a1c8662a031f0552eaa160f322f8 data/testmod/loot_tables/blocks/hemp_trapdoor.json
 7856feb36a67f4794ffe8d0d7fa3362e5e8c2fba data/testmod/loot_tables/blocks/weed_crop.json
+a62e712603a699c3cdf14e31431971ad77b5439a data/testmod/loot_tables/blocks/weed_leaves.json

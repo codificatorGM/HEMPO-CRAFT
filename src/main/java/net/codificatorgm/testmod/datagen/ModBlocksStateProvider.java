@@ -5,8 +5,7 @@ import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -23,8 +22,21 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.WEED_BLOCK);
+        blockWithItem(ModBlocks.WEED_LEAVES);
+        blockWithItem(ModBlocks.HEMP_BLOCK);
+
         makeWeedCrop((CropBlock) ModBlocks.WEED_CROP.get(), "weed_crop_stage", "weed_crop_stage");
+
+        stairsBlock(((StairBlock) ModBlocks.HEMP_STAIRS.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
+        slabBlock(((SlabBlock) ModBlocks.HEMP_SLAB.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
+        buttonBlock(((ButtonBlock) ModBlocks.HEMP_BUTTON.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.HEMP_PRESSURE_PLATE.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
+
+        fenceBlock(((FenceBlock) ModBlocks.HEMP_FENCE.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
+        fenceGateBlock(((FenceGateBlock) ModBlocks.HEMP_FENCE_GATE.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
+
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.HEMP_DOOR.get()), modLoc("block/hemp_door_bottom"), modLoc("block/hemp_door_top"),"cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.HEMP_TRAPDOOR.get()), modLoc("block/hemp_trapdoor"),true,"cutout");
 
     }
 

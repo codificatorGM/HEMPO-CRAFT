@@ -49,7 +49,8 @@ public class TestMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.WEED_LEAF);
             event.accept(ModItems.JOINT);
-            event.accept(ModBlocks.WEED_BLOCK);
+            event.accept(ModBlocks.WEED_LEAVES);
+            event.accept(ModBlocks.HEMP_BLOCK);
             event.accept(ModItems.WEED_SEEDS);
             event.accept(ModItems.WEED_BUD);
             event.accept(ModItems.HARVESTED_WEED);

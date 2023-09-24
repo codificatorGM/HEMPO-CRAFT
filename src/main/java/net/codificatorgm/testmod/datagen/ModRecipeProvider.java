@@ -18,7 +18,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WEED_BLOCK.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WEED_LEAVES.get(), 4)
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")

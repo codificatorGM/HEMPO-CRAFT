@@ -1,9 +1,9 @@
-// 1.20.1	2023-09-24T02:47:45.5617748	Recipes
+// 1.20.1	2023-09-24T14:27:50.9000575	Recipes
 737419c3ad318e4b7f447b5a888b0591e7cc19ea data/testmod/advancements/recipes/misc/joint.json
-d2d185a3c1d4a9710bfd6451274ec9b4347a0311 data/testmod/advancements/recipes/misc/weed_block.json
 72f2dada28a5f16c9f2c74f6efd9d57e7762c029 data/testmod/advancements/recipes/misc/weed_bud.json
+76a6c2f3c8cf948eda6dce9f281e881ea3722638 data/testmod/advancements/recipes/misc/weed_leaves.json
 74015154317de8474b9f14a292cb1bb0cc3c9bb4 data/testmod/advancements/recipes/misc/weed_seeds.json
 dc74e7becee53403a70ba4921d5e5e91f8e12adf data/testmod/recipes/joint.json
-126f13120a36667e545e3a39aa4003dc8b954be7 data/testmod/recipes/weed_block.json
 667a64fbbe3d6b345c4c3ee5d5e4043db5a7b019 data/testmod/recipes/weed_bud.json
+d60000e77b4fa5772d6051a712697475b452a005 data/testmod/recipes/weed_leaves.json
 2c8aa14b717a9ef2c09869d793360aa10d0a0031 data/testmod/recipes/weed_seeds.json

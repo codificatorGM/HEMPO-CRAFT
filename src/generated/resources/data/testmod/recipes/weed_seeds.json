@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_bud"
+    }
+  ],
+  "result": {
+    "item": "testmod:weed_seeds"
+  }
+}

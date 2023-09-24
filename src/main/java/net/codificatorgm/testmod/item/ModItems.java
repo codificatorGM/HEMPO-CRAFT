@@ -21,6 +21,9 @@ public class ModItems {
     public static final RegistryObject<Item> WEED_BUD = ITEMS.register("weed_bud",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> HARVESTED_WEED = ITEMS.register("harvested_weed",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> JOINT = ITEMS.register("joint",
             () -> new Item(new Item.Properties().food(ModFoods.JOINT)));
 

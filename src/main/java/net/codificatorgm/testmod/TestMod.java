@@ -52,6 +52,7 @@ public class TestMod {
             event.accept(ModBlocks.WEED_BLOCK);
             event.accept(ModItems.WEED_SEEDS);
             event.accept(ModItems.WEED_BUD);
+            event.accept(ModItems.HARVESTED_WEED);
         }
 
     }

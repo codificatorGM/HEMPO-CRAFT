@@ -4,5 +4,13 @@
   "item.testmod.weed_seeds": "Weed Seed",
   "item.testmod.weed_bud": "Weed Bud",
   "item.testmod.harvested_weed": "Harvested Weed",
-  "block.testmod.weed_block": "Weed Block"
+  "block.testmod.weed_leaves": "Weed Leaves",
+  "block.testmod.hemp_stairs": "Hemp Block",
+  "block.testmod.hemp_slab": "Hemp Slab",
+  "block.testmod.hemp_button": "Hemp Button",
+  "block.testmod.hemp_pressure_plate": "Hemp Pressure Plate",
+  "block.testmod.hemp_fence": "Hemp Fence",
+  "block.testmod.hemp_fence_gate": "Hemp Fence Gate",
+  "block.testmod.hemp_door": "Hemp Door",
+  "block.testmod.hemp_trapdoor": "Hemp Trapdoor"
 }

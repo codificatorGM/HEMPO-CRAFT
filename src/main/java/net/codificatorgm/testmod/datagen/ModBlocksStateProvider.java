@@ -3,6 +3,7 @@ package net.codificatorgm.testmod.datagen;
 import net.codificatorgm.testmod.TestMod;
 import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
+import net.codificatorgm.testmod.block.custom.SativaCropBlock;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +29,8 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         makeWeedCrop((CropBlock) ModBlocks.WEED_CROP.get(), "weed_crop_stage", "weed_crop_stage");
         makePurpleHazeCrop((CropBlock) ModBlocks.PURPLE_HAZE_CROP.get(), "purple_haze_crop_stage", "purple_haze_crop_stage");
+        makeSativaCrop((CropBlock) ModBlocks.SATIVA_CROP.get(), "sativa_crop_stage", "sativa_crop_stage");
+
 
         stairsBlock(((StairBlock) ModBlocks.HEMP_STAIRS.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
         slabBlock(((SlabBlock) ModBlocks.HEMP_SLAB.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
@@ -65,6 +68,20 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((WeedCropBlock) block).getAgeProperty()),
                 new ResourceLocation(TestMod.MOD_ID, "block/" + textureName + state.getValue(((WeedCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeSativaCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> sativaStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] sativaStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SativaCropBlock) block).getAgeProperty()),
+                new ResourceLocation(TestMod.MOD_ID, "block/" + textureName + state.getValue(((SativaCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

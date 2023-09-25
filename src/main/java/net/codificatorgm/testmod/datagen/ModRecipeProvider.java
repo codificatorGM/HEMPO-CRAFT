@@ -68,6 +68,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.WEED_LEAF.get()), has(ModItems.WEED_LEAF.get()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WEED_COOKIE.get(), 4)
+                .requires(ModItems.WEED_BUD.get(), 4)
+                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+                .requires(Items.COOKIE, 4)
+                .unlockedBy(getHasName(Items.COOKIE), has(Items.COOKIE))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WEED_BROWNIE.get(), 6)
+                .requires(ModItems.WEED_BUD.get(), 3)
+                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+                .requires(Items.COCOA_BEANS, 2)
+                .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
+                .requires(Items.WHEAT, 2)
+                .unlockedBy(getHasName(Items.WHEAT), has(Items.WHEAT))
+                .requires(Items.EGG, 2)
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WEED_MUFFIN.get(), 3)
+                .requires(ModItems.WEED_BUD.get(), 3)
+                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+                .requires(Items.GOLDEN_CARROT, 2)
+                .unlockedBy(getHasName(Items.GOLDEN_CARROT), has(Items.GOLDEN_CARROT))
+                .requires(Items.EGG, 2)
+                .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CANNAMILK.get(), 1)
+                .requires(ModItems.WEED_BUD.get(), 7)
+                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+                .requires(Items.MILK_BUCKET, 1)
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .requires(Items.NETHERITE_INGOT, 1)
+                .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.HEMP_BLOCK.get(), 9)
                 .requires(ModItems.WEED_LEAF.get(), 3)
                 .unlockedBy(getHasName(ModItems.WEED_LEAF.get()), has(ModItems.WEED_LEAF.get()))

@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-24T18:53:24.3376985	Block States: testmod
+// 1.20.1	2023-09-24T22:05:58.2104371	Block States: testmod
 11d164d2c26adaa629cfb194af49b896ac8a52ba assets/testmod/blockstates/hemp_block.json
 0d9faee18baf938ab71d0f83ee3964360e9e4c26 assets/testmod/blockstates/hemp_button.json
 3c0e730ea3df1e89d7487478ca0e7325c247db8c assets/testmod/blockstates/hemp_door.json
@@ -9,6 +9,7 @@ d5a39e2fb9767d5147af04dc4e2af67e140ca1c9 assets/testmod/blockstates/hemp_slab.js
 b35fc04368b038614e1b4cb36136d935d4e78050 assets/testmod/blockstates/hemp_stairs.json
 4f1cac7aef424d4f4abc6294eb592ef3b69382a3 assets/testmod/blockstates/hemp_trapdoor.json
 43b4dd84e0f896e514867325eac47e7ec3e4f041 assets/testmod/blockstates/purple_haze_crop.json
+750a453945279f6759be6679d9ee4b7a88f3c2b6 assets/testmod/blockstates/sativa_crop.json
 19719498e35c83b5c014e545c34384ed8b037d63 assets/testmod/blockstates/weed_crop.json
 035a8da63140bb88b471b8c60ba963ccc8406fbb assets/testmod/blockstates/weed_leaves.json
 79add4ba9b9c35217697d9d9752de6e7e3c292d4 assets/testmod/models/block/hemp_block.json
@@ -44,6 +45,14 @@ e05c40d2bbedd6ce903281d87b80a2f4e44f7885 assets/testmod/models/block/purple_haze
 4de2692ff8da3dc3d786882df61eed75b8cdc01c assets/testmod/models/block/purple_haze_crop_stage3.json
 6f23a3cc861817ad96632ff33d1aaf88c128cef8 assets/testmod/models/block/purple_haze_crop_stage4.json
 f70c6b97109f4addbcfb98d7f929c8d6a4014bde assets/testmod/models/block/purple_haze_crop_stage5.json
+b242040efc760cb35a7bd7b6e90f8f866c9bea1d assets/testmod/models/block/sativa_crop_stage0.json
+f90dc1f4685923c4e1a4754f60d4b7d52ee94746 assets/testmod/models/block/sativa_crop_stage1.json
+904e2b990b2355d836060126f8228f14d5fdeed6 assets/testmod/models/block/sativa_crop_stage2.json
+96e73c39648a43b16f1c8cf5296dba5fb70e9e0f assets/testmod/models/block/sativa_crop_stage3.json
+1c6fb12e355ec454a69d9889d895a1c6168cefac assets/testmod/models/block/sativa_crop_stage4.json
+970bf0ca06caa836e15e61ae685fca2afa9c2a75 assets/testmod/models/block/sativa_crop_stage5.json
+c243b23e6fb4fdd8875cd629dd09b6d57263338b assets/testmod/models/block/sativa_crop_stage6.json
+59c5f003bd82b9426fa9190f377da7a17787e76a assets/testmod/models/block/sativa_crop_stage7.json
 8cd9a2d2635edf2ac452ae53d1cc7467c40c7564 assets/testmod/models/block/weed_crop_stage0.json
 f546100b0796ccd3f0c1096ff84cc6e7e6441fba assets/testmod/models/block/weed_crop_stage1.json
 8cfe6d046b8127f6ab819b55e861c4541fe5b3e2 assets/testmod/models/block/weed_crop_stage2.json

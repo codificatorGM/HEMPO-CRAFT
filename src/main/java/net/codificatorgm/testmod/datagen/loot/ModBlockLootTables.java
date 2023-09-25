@@ -2,6 +2,7 @@ package net.codificatorgm.testmod.datagen.loot;
 
 import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
+import net.codificatorgm.testmod.block.custom.SativaCropBlock;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
 import net.codificatorgm.testmod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -10,6 +11,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -18,15 +20,46 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
+import java.util.function.Function;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    }
+
+    public LootTable.Builder createLikeStemDropsTwoItems(Block pBlock, Item pItem, Item pItem2) {
+        return LootTable.lootTable()
+                .withPool(this.applyExplosionDecay(pBlock,
+                        LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1.0F))
+                                .add(LootItem.lootTableItem(pItem)
+                                        .apply(StemBlock.AGE.getPossibleValues(), (p_249795_) -> {
+                                            return SetItemCountFunction.setCount(
+                                                    BinomialDistributionGenerator.binomial(3, (float)(p_249795_ + 1) / 15.0F)
+                                            ).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock)
+                                                    .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                            .hasProperty(StemBlock.AGE, p_249795_))
+                                            );
+                                        })
+                                )
+                                .add(LootItem.lootTableItem(pItem2)
+                                        .apply(StemBlock.AGE.getPossibleValues(), (p_249795_) -> {
+                                            return SetItemCountFunction.setCount(
+                                                    BinomialDistributionGenerator.binomial(3, (float)(p_249795_ + 1) / 15.0F)
+                                            ).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock)
+                                                    .setProperties(StatePropertiesPredicate.Builder.properties()
+                                                            .hasProperty(StemBlock.AGE, p_249795_))
+                                            );
+                                        })
+                                )
+                ));
     }
 
     @Override
@@ -34,7 +67,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.WEED_LEAVES.get(),
                 block -> createLikeSilkTouchOrShearsDispatchTable(ModBlocks.WEED_LEAVES.get()
-                        , LootItem.lootTableItem(ModItems.WEED_LEAF.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))));
+                        , LootItem.lootTableItem(ModItems.WEED_LEAF.get())
+                                .apply(SetItemCountFunction
+                                        .setCount(UniformGenerator
+                                                .between(1.0F, 3.0F)))));
 
         LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
                 .hasBlockStateProperties(ModBlocks.WEED_CROP.get())
@@ -47,6 +83,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PurpleHazeCropBlock.AGE, 5));
         this.add(ModBlocks.PURPLE_HAZE_CROP.get(), createCropDrops(ModBlocks.PURPLE_HAZE_CROP.get(), ModItems.HARVESTED_PURPLE_HAZE.get(),
                 ModItems.PURPLE_HAZE_SEEDS.get(), lootitemcondition$builders));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.SATIVA_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SativaCropBlock.AGE, 7));
+
+        this.add(ModBlocks.SATIVA_CROP.get(),
+                block -> createLikeStemDropsTwoItems(ModBlocks.SATIVA_CROP.get()
+                        ,ModItems.HARVESTED_WEED.get(), ModItems.WEED_LEAF.get())
+                                .apply(SetItemCountFunction
+                                        .setCount(UniformGenerator
+                                                .between(1.0F, 3.0F)).when(lootitemcondition$builder2)));
+
 
         this.dropSelf(ModBlocks.HEMP_BLOCK.get());
         this.dropSelf(ModBlocks.HEMP_FENCE.get());
@@ -63,11 +111,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createDoorTable(ModBlocks.HEMP_DOOR.get()));
 
 
-
-    }
-
-    protected LootTable.Builder createCropDropsLike(Block pCropBlock, Item pGrownCropItem, Item pSeedsItem, LootItemCondition.Builder pDropGrownCropCondition) {
-        return this.applyExplosionDecay(pCropBlock, LootTable.lootTable().withPool(LootPool.lootPool().add(LootItem.lootTableItem(pGrownCropItem).when(pDropGrownCropCondition).otherwise(LootItem.lootTableItem(pSeedsItem)))).withPool(LootPool.lootPool().when(pDropGrownCropCondition).add(LootItem.lootTableItem(pSeedsItem).apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.5714286F, 3)))));
     }
 
     protected static LootTable.Builder createLikeSilkTouchOrShearsDispatchTable(Block pBlock, LootPoolEntryContainer.Builder<?> pBuilder) {

@@ -48,17 +48,22 @@ public class TestMod {
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.WEED_LEAF);
-            event.accept(ModItems.JOINT);
-            event.accept(ModItems.BLUNT);
             event.accept(ModBlocks.WEED_LEAVES);
             event.accept(ModItems.WEED_SEEDS);
             event.accept(ModItems.WEED_BUD);
             event.accept(ModItems.HARVESTED_WEED);
-            event.accept(ModItems.PURPLE_HAZE_JOINT);
-            event.accept(ModItems.HARVESTED_PURPLE_HAZE);
-            event.accept(ModItems.PURPLE_HAZE_BUD);
-            event.accept(ModItems.PURPLE_HAZE_BLUNT);
             event.accept(ModItems.PURPLE_HAZE_SEEDS);
+            event.accept(ModItems.PURPLE_HAZE_BUD);
+            event.accept(ModItems.HARVESTED_PURPLE_HAZE);
+            event.accept(ModItems.SATIVA_SEEDS);
+            event.accept(ModItems.JOINT);
+            event.accept(ModItems.BLUNT);
+            event.accept(ModItems.PURPLE_HAZE_JOINT);
+            event.accept(ModItems.PURPLE_HAZE_BLUNT);
+            event.accept(ModItems.CANNAMILK);
+            event.accept(ModItems.WEED_COOKIE);
+            event.accept(ModItems.WEED_MUFFIN);
+            event.accept(ModItems.WEED_BROWNIE);
             event.accept(ModBlocks.HEMP_BLOCK);
             event.accept(ModBlocks.HEMP_STAIRS);
             event.accept(ModBlocks.HEMP_BUTTON);

@@ -2,6 +2,8 @@ package net.codificatorgm.testmod.item;
 
 import net.codificatorgm.testmod.TestMod;
 import net.codificatorgm.testmod.block.ModBlocks;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
@@ -36,15 +38,41 @@ public class ModItems {
 
     public static final RegistryObject<Item> PURPLE_HAZE_BLUNT = ITEMS.register("purple_haze_blunt",
             () -> new Item(new Item.Properties().food(ModFoods.PURPLE_HAZE_BLUNT)));
+
+    public static final RegistryObject<Item> CANNAMILK = ITEMS.register("cannamilk",
+            () -> new CannaMilkItem(new Item.Properties().food(ModFoods.CANNAMILK)));
+
+    public static final RegistryObject<Item> WEED_COOKIE = ITEMS.register("weed_cookie",
+            () -> new Item(new Item.Properties().food(ModFoods.WEED_COOKIE)));
+
+    public static final RegistryObject<Item> WEED_BROWNIE = ITEMS.register("weed_brownie",
+            () -> new Item (new Item.Properties().food(ModFoods.WEED_BROWNIE)));
+
+    public static final RegistryObject<Item> WEED_MUFFIN = ITEMS.register("weed_muffin",
+            () -> new Item(new Item.Properties().food(ModFoods.WEED_MUFFIN)));
     public static final RegistryObject<Item> WEED_SEEDS = ITEMS.register("weed_seeds",
             () -> new ItemNameBlockItem(ModBlocks.WEED_CROP.get(), new Item.Properties()));
 
+    public static final RegistryObject<Item> SATIVA_SEEDS = ITEMS.register("sativa_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.SATIVA_CROP.get(), new Item.Properties()));
+
     public static final RegistryObject<Item> PURPLE_HAZE_SEEDS = ITEMS.register("purple_haze_seeds",
             () -> new ItemNameBlockItem(ModBlocks.PURPLE_HAZE_CROP.get(), new Item.Properties()));
+
+
 
     public static void register(IEventBus eventBus){
 
         ITEMS.register(eventBus);
 
+    }
+
+    public static class CannaMilkItem extends Item {
+        public CannaMilkItem(Item.Properties builder) {
+            super(builder);
+        }
+        public SoundEvent getDrinkingSoundLike() {
+            return SoundEvents.GENERIC_DRINK;
+        }
     }
 }

@@ -3,6 +3,7 @@
 package net.codificatorgm.testmod.block;
 
 import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
 import net.codificatorgm.testmod.item.ModItems;
 import net.minecraft.sounds.SoundEvent;
@@ -32,6 +33,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> WEED_CROP = BLOCKS.register("weed_crop",
             () -> new WeedCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> PURPLE_HAZE_CROP = BLOCKS.register("purple_haze_crop",
+            () -> new PurpleHazeCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
+
     public static final RegistryObject<Block> HEMP_BLOCK = registerBlock("hemp_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
 
@@ -40,6 +44,7 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
     public static final RegistryObject<Block> HEMP_SLAB = registerBlock("hemp_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)));
+
 
     public static final RegistryObject<Block> HEMP_BUTTON = registerBlock("hemp_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_BUTTON),

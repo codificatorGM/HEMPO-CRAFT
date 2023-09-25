@@ -49,13 +49,27 @@ public class TestMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.WEED_LEAF);
             event.accept(ModItems.JOINT);
+            event.accept(ModItems.BLUNT);
             event.accept(ModBlocks.WEED_LEAVES);
-            event.accept(ModBlocks.HEMP_BLOCK);
             event.accept(ModItems.WEED_SEEDS);
             event.accept(ModItems.WEED_BUD);
             event.accept(ModItems.HARVESTED_WEED);
-        }
+            event.accept(ModItems.PURPLE_HAZE_JOINT);
+            event.accept(ModItems.HARVESTED_PURPLE_HAZE);
+            event.accept(ModItems.PURPLE_HAZE_BUD);
+            event.accept(ModItems.PURPLE_HAZE_BLUNT);
+            event.accept(ModItems.PURPLE_HAZE_SEEDS);
+            event.accept(ModBlocks.HEMP_BLOCK);
+            event.accept(ModBlocks.HEMP_STAIRS);
+            event.accept(ModBlocks.HEMP_BUTTON);
+            event.accept(ModBlocks.HEMP_FENCE);
+            event.accept(ModBlocks.HEMP_DOOR);
+            event.accept(ModBlocks.HEMP_SLAB);
+            event.accept(ModBlocks.HEMP_TRAPDOOR);
+            event.accept(ModBlocks.HEMP_PRESSURE_PLATE);
+            event.accept(ModBlocks.HEMP_FENCE_GATE);
 
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

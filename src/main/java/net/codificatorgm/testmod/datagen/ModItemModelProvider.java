@@ -22,10 +22,16 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.JOINT);
+        simpleItem(ModItems.BLUNT);
         simpleItem(ModItems.WEED_LEAF);
         simpleItem(ModItems.WEED_BUD);
         simpleItem(ModItems.WEED_SEEDS);
         simpleItem(ModItems.HARVESTED_WEED);
+        simpleItem(ModItems.HARVESTED_PURPLE_HAZE);
+        simpleItem(ModItems.PURPLE_HAZE_BUD);
+        simpleItem(ModItems.PURPLE_HAZE_JOINT);
+        simpleItem(ModItems.PURPLE_HAZE_SEEDS);
+        simpleItem(ModItems.PURPLE_HAZE_BLUNT);
 
         simpleBlockItem(ModBlocks.HEMP_DOOR);
 

@@ -1,4 +1,6 @@
-// 1.20.1	2023-09-24T15:38:58.8144478	Item Models: testmod
+// 1.20.1	2023-09-24T18:26:56.4316938	Item Models: testmod
+f3c1b2e1460d5c281224b7528113270130c40ede assets/testmod/models/item/blunt.json
+f3cdbedff3c88f0639b905f0ee0484c4d6e09f65 assets/testmod/models/item/harvested_purple_haze.json
 d4be1f492ef95381fef044e6ce08f5d700a97c62 assets/testmod/models/item/harvested_weed.json
 b90c3f895b25ca27be2125b0b78e3806a1df07d9 assets/testmod/models/item/hemp_button.json
 c484d5ae78e662b95859e59f99c1424964c33bec assets/testmod/models/item/hemp_door.json
@@ -9,6 +11,10 @@ a82ef7583cc0cf8fa6d169c24c6f283e4326d8ca assets/testmod/models/item/hemp_slab.js
 eaa4fbcdf9fde02264402ee1641272d119e823d3 assets/testmod/models/item/hemp_stairs.json
 452fa73dcfc4aa024d26b4d60d339329c71c3265 assets/testmod/models/item/hemp_trapdoor.json
 863c14aeae00f37593cf80e7e16cb11348e6da7c assets/testmod/models/item/joint.json
+7e23c9e83b5cf7493481f0df7fa43b4a2e3b1227 assets/testmod/models/item/purple_haze_blunt.json
+b848466b6a39b7059a221d9466bac159b8a48384 assets/testmod/models/item/purple_haze_bud.json
+f785259318552996ca11b8997014705ba5d95d0c assets/testmod/models/item/purple_haze_joint.json
+65af1e4e7a959e1e19cefacacbd2a0f2be51e0f8 assets/testmod/models/item/purple_haze_seeds.json
 23ed81ebcfe8149d46c7e3567b8184bb2131669d assets/testmod/models/item/weed_bud.json
 0303b7560641bca480080be447c17fc338027823 assets/testmod/models/item/weed_leaf.json
 2fee994d4f93efc0b6e474cfe2d9f8a11b415b3d assets/testmod/models/item/weed_seeds.json

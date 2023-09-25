@@ -1,6 +1,7 @@
 package net.codificatorgm.testmod.datagen.loot;
 
 import net.codificatorgm.testmod.block.ModBlocks;
+import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
 import net.codificatorgm.testmod.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -40,6 +41,12 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(WeedCropBlock.AGE, 5));
         this.add(ModBlocks.WEED_CROP.get(), createCropDrops(ModBlocks.WEED_CROP.get(), ModItems.HARVESTED_WEED.get(),
                 ModItems.WEED_SEEDS.get(), lootitemcondition$builder));
+
+        LootItemCondition.Builder lootitemcondition$builders = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.PURPLE_HAZE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PurpleHazeCropBlock.AGE, 5));
+        this.add(ModBlocks.PURPLE_HAZE_CROP.get(), createCropDrops(ModBlocks.PURPLE_HAZE_CROP.get(), ModItems.HARVESTED_PURPLE_HAZE.get(),
+                ModItems.PURPLE_HAZE_SEEDS.get(), lootitemcondition$builders));
 
         this.dropSelf(ModBlocks.HEMP_BLOCK.get());
         this.dropSelf(ModBlocks.HEMP_FENCE.get());

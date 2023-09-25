@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "testmod:hemp_block"
+    }
+  ],
+  "result": {
+    "item": "testmod:hemp_button"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:harvested_weed"
+    },
+    {
+      "item": "testmod:harvested_weed"
+    },
+    {
+      "item": "testmod:harvested_weed"
+    },
+    {
+      "item": "testmod:harvested_weed"
+    },
+    {
+      "item": "testmod:harvested_weed"
+    },
+    {
+      "item": "minecraft:shears"
+    }
+  ],
+  "result": {
+    "count": 64,
+    "item": "testmod:weed_leaf"
+  }
+}

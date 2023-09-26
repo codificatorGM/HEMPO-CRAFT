@@ -1,3 +1,4 @@
+
 package net.codificatorgm.testmod.item;
 
 import net.minecraft.world.effect.*;
@@ -67,4 +68,16 @@ public class ModFoods {
             effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 500), 1f).
             effect(() -> new MobEffectInstance(MobEffects.HUNGER, 700), 0.25f).
             build();
+
+    public static final FoodProperties GRAPEFRUIT_SODA = new FoodProperties.Builder().nutrition(1)
+            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,
+                    1200), 1f).effect(() -> new MobEffectInstance(MobEffects.LUCK, 3600), 1f).
+            effect(() -> new MobEffectInstance(MobEffects.HEAL, 5, 1), 1f)
+            .alwaysEat().build();
+
+    public static final FoodProperties LEMON_SODA = new FoodProperties.Builder().nutrition(1)
+            .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,
+                    1200), 1f).effect(() -> new MobEffectInstance(MobEffects.LUCK, 3600), 1f).
+            effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 1200, 1), 1f).
+            alwaysEat().build();
 }

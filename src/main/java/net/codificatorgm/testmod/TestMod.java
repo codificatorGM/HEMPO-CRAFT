@@ -56,6 +56,9 @@ public class TestMod {
             event.accept(ModItems.PURPLE_HAZE_BUD);
             event.accept(ModItems.HARVESTED_PURPLE_HAZE);
             event.accept(ModItems.SATIVA_SEEDS);
+            event.accept(ModItems.HAZE_SATIVA_SEEDS);
+            event.accept(ModItems.LEMON_SODA);
+            event.accept(ModItems.GRAPEFRUIT_SODA);
             event.accept(ModItems.JOINT);
             event.accept(ModItems.BLUNT);
             event.accept(ModItems.PURPLE_HAZE_JOINT);

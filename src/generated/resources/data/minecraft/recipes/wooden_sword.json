@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "testmod:hemp_block"
+    },
+    "W": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " S ",
+    " S ",
+    " W "
+  ],
+  "result": {
+    "item": "minecraft:wooden_sword"
+  },
+  "show_notification": true
+}

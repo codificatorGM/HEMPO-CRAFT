@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:purple_haze_bud"
+    },
+    {
+      "item": "testmod:purple_haze_bud"
+    },
+    {
+      "item": "testmod:purple_haze_bud"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:chorus_fruit"
+    },
+    {
+      "item": "minecraft:potion"
+    }
+  ],
+  "result": {
+    "item": "testmod:grapefruit_soda"
+  }
+}

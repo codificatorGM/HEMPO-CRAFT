@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "testmod:hemp_block"
+    },
+    "W": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SS ",
+    " W ",
+    " W "
+  ],
+  "result": {
+    "item": "minecraft:wooden_hoe"
+  },
+  "show_notification": true
+}

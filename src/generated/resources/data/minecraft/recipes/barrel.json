@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "testmod:hemp_block"
+    },
+    "W": {
+      "item": "testmod:hemp_slab"
+    }
+  },
+  "pattern": [
+    "SWS",
+    "S S",
+    "SWS"
+  ],
+  "result": {
+    "item": "minecraft:barrel"
+  },
+  "show_notification": true
+}

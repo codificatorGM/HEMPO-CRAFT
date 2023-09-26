@@ -2,6 +2,7 @@ package net.codificatorgm.testmod.datagen;
 
 import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.item.ModItems;
+import net.minecraft.commands.arguments.NbtTagArgument;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.*;
@@ -266,13 +267,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAPEFRUIT_SODA.get(), 1)
-                .requires(ModItems.PURPLE_HAZE_BUD.get(), 3)
-                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
-                .requires(Items.CHORUS_FRUIT, 2)
-                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
-                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
-                .save(pWriter);
+    //    ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAPEFRUIT_SODA.get(), 1)
+   //             .requires(ModItems.PURPLE_HAZE_BUD.get(), 3)
+  //              .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+   //             .requires(Items.CHORUS_FRUIT, 2)
+  //              .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
+ //               .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+ //               .save(pWriter);
+
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LEMON_SODA.get(), 1)
                 .requires(ModItems.WEED_BUD.get(), 3)

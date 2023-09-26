@@ -33,10 +33,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PURPLE_HAZE_SEEDS);
         simpleItem(ModItems.PURPLE_HAZE_BLUNT);
         simpleItem(ModItems.SATIVA_SEEDS);
+        simpleItem(ModItems.HAZE_SATIVA_SEEDS);
         simpleItem(ModItems.CANNAMILK);
         simpleItem(ModItems.WEED_COOKIE);
         simpleItem(ModItems.WEED_MUFFIN);
         simpleItem(ModItems.WEED_BROWNIE);
+        simpleItem(ModItems.GRAPEFRUIT_SODA);
+        simpleItem(ModItems.LEMON_SODA);
 
 
         simpleBlockItem(ModBlocks.HEMP_DOOR);

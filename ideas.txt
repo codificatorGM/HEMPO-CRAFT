@@ -7,7 +7,20 @@
 - PURPLE HAZE								READY
 
 
-- EDIBLES - COOKIES - CAKE - CANNABUTTER - BROWNIES - FIRECRACKERS
+NEW OBJECTS	
+
+magic_cookie						READY
+
+CannaMilk for CannaCake				READY
+
+magic_brownie				READY
+
+Firecracker				READY
+
+3 Watermelon + 3 Weed bud+ Water Bucket --> 2x Magic Shake 	
+
+
+- EDIBLES - COOKIES - CAKE - CANNABUTTER - BROWNIES - FIRECRACKERS		READY
 
 - VILLAGER TRADE SEEDS AND PURPLE HAZE SEEDS
 
@@ -27,4 +40,5 @@ PURPLEHAZE BUD + PIPE = HAZE FILLED PIPE
 
 WAX + PEN = FILLED WAX PEN
 
-
+		BUGS 
+FIX RECIPES FOR PLANKS

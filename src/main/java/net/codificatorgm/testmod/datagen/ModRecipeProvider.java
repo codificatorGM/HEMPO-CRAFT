@@ -4,11 +4,15 @@ import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.MinecartItem;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.crafting.PartialNBTIngredient;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -29,10 +33,177 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.WEED_LEAF.get()), has(ModItems.WEED_LEAF.get()))
                 .save(pWriter);
 
+
+        // VANILLA RECIPES FOR WOODEN PLANKS
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.STICK, 4)
                 .pattern("S  ")
                 .pattern("S  ")
                 .define('S', ModBlocks.HEMP_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CRAFTING_TABLE, 1)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CHEST, 1)
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WHITE_BED, 1)
+                .pattern("WWW")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.WHITE_WOOL)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.OAK_BOAT, 1)
+                .pattern("S S")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.BOOKSHELF, 1)
+                .pattern("SSS")
+                .pattern("WWW")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.BOOK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.NOTE_BLOCK, 1)
+                .pattern("SSS")
+                .pattern("SWS")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.REDSTONE)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.JUKEBOX, 1)
+                .pattern("SSS")
+                .pattern("SWS")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.DIAMOND)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.SHIELD, 1)
+                .pattern("SWS")
+                .pattern("SSS")
+                .pattern(" S ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BAMBOO_SIGN, 3)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" W ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BEEHIVE, 1)
+                .pattern("SSS")
+                .pattern("WWW")
+                .pattern("SSS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.HONEYCOMB)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BARREL, 1)
+                .pattern("SWS")
+                .pattern("S S")
+                .pattern("SWS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', ModBlocks.HEMP_SLAB.get())
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WOODEN_AXE, 1)
+                .pattern("SSS")
+                .pattern("SW ")
+                .pattern(" W ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WOODEN_PICKAXE, 1)
+                .pattern("SSS")
+                .pattern(" W ")
+                .pattern(" W ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WOODEN_SWORD, 1)
+                .pattern(" S ")
+                .pattern(" S ")
+                .pattern(" W ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WOODEN_SHOVEL, 1)
+                .pattern(" S ")
+                .pattern(" W ")
+                .pattern(" W ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.WOODEN_HOE, 1)
+                .pattern("SS ")
+                .pattern(" W ")
+                .pattern(" W ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.PISTON, 1)
+                .pattern("SSS")
+                .pattern("CIC")
+                .pattern("CRC")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('C', Items.COBBLESTONE)
+                .define('R', Items.REDSTONE)
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.BOWL, 4)
+                .pattern("S S")
+                .pattern(" S ")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.CARTOGRAPHY_TABLE, 1)
+                .pattern("WW")
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', ModBlocks.HEMP_BLOCK.get())
+                .define('W', Items.PAPER)
                 .unlockedBy(getHasName(ModBlocks.HEMP_BLOCK.get()), has(ModBlocks.HEMP_BLOCK.get()))
                 .save(pWriter);
 
@@ -93,6 +264,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.GOLDEN_CARROT), has(Items.GOLDEN_CARROT))
                 .requires(Items.EGG, 2)
                 .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAPEFRUIT_SODA.get(), 1)
+                .requires(ModItems.PURPLE_HAZE_BUD.get(), 3)
+                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+                .requires(Items.CHORUS_FRUIT, 2)
+                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
+                .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LEMON_SODA.get(), 1)
+                .requires(ModItems.WEED_BUD.get(), 3)
+                .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+                .requires(Items.SLIME_BALL, 1)
+                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
+                .requires(Items.GLASS_BOTTLE, 1)
+                .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CANNAMILK.get(), 1)

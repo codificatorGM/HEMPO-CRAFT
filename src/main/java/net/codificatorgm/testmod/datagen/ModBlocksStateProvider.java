@@ -2,6 +2,7 @@ package net.codificatorgm.testmod.datagen;
 
 import net.codificatorgm.testmod.TestMod;
 import net.codificatorgm.testmod.block.ModBlocks;
+import net.codificatorgm.testmod.block.custom.HazeSativaCropBlock;
 import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
 import net.codificatorgm.testmod.block.custom.SativaCropBlock;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
@@ -30,7 +31,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         makeWeedCrop((CropBlock) ModBlocks.WEED_CROP.get(), "weed_crop_stage", "weed_crop_stage");
         makePurpleHazeCrop((CropBlock) ModBlocks.PURPLE_HAZE_CROP.get(), "purple_haze_crop_stage", "purple_haze_crop_stage");
         makeSativaCrop((CropBlock) ModBlocks.SATIVA_CROP.get(), "sativa_crop_stage", "sativa_crop_stage");
-
+        makeHazeCrop((CropBlock) ModBlocks.HAZE_CROP.get(), "haze_sativa_stage", "haze_sativa_stage");
 
         stairsBlock(((StairBlock) ModBlocks.HEMP_STAIRS.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
         slabBlock(((SlabBlock) ModBlocks.HEMP_SLAB.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
@@ -55,6 +56,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         Function<BlockState, ConfiguredModel[]> function = state -> purpleHazeStates(state, block, modelName, textureName);
         getVariantBuilder(block).forAllStates(function);
     }
+
 
     private ConfiguredModel[] purpleHazeStates(BlockState state, CropBlock block, String modelName, String textureName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
@@ -82,6 +84,20 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SativaCropBlock) block).getAgeProperty()),
                 new ResourceLocation(TestMod.MOD_ID, "block/" + textureName + state.getValue(((SativaCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
+    }
+
+    public void makeHazeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> hazeStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] hazeStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((HazeSativaCropBlock) block).getAgeProperty()),
+                new ResourceLocation(TestMod.MOD_ID, "block/" + textureName + state.getValue(((HazeSativaCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
     }

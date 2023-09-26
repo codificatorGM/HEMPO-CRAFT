@@ -99,7 +99,7 @@ public class SativaCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return ModItems.SATIVA_SEEDS.get();
+        return ModItems.HAZE_SATIVA_SEEDS.get();
     }
 
     @Override

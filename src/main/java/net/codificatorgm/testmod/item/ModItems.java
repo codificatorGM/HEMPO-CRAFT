@@ -48,6 +48,12 @@ public class ModItems {
     public static final RegistryObject<Item> WEED_BROWNIE = ITEMS.register("weed_brownie",
             () -> new Item (new Item.Properties().food(ModFoods.WEED_BROWNIE)));
 
+    public static final RegistryObject<Item> LEMON_SODA = ITEMS.register("lemon_soda",
+            () -> new Item (new Item.Properties().food(ModFoods.LEMON_SODA)));
+
+    public static final RegistryObject<Item> GRAPEFRUIT_SODA = ITEMS.register("grapefruit_soda",
+            () -> new Item (new Item.Properties().food(ModFoods.GRAPEFRUIT_SODA)));
+
     public static final RegistryObject<Item> WEED_MUFFIN = ITEMS.register("weed_muffin",
             () -> new Item(new Item.Properties().food(ModFoods.WEED_MUFFIN)));
     public static final RegistryObject<Item> WEED_SEEDS = ITEMS.register("weed_seeds",
@@ -55,6 +61,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> SATIVA_SEEDS = ITEMS.register("sativa_seeds",
             () -> new ItemNameBlockItem(ModBlocks.SATIVA_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> HAZE_SATIVA_SEEDS = ITEMS.register("haze_sativa_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.HAZE_CROP.get(), new Item.Properties()));
 
     public static final RegistryObject<Item> PURPLE_HAZE_SEEDS = ITEMS.register("purple_haze_seeds",
             () -> new ItemNameBlockItem(ModBlocks.PURPLE_HAZE_CROP.get(), new Item.Properties()));

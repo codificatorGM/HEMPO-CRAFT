@@ -3,6 +3,7 @@
 package net.codificatorgm.testmod.block;
 
 import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.testmod.block.custom.HazeSativaCropBlock;
 import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
 import net.codificatorgm.testmod.block.custom.SativaCropBlock;
 import net.codificatorgm.testmod.block.custom.WeedCropBlock;
@@ -35,6 +36,9 @@ public class ModBlocks {
             () -> new WeedCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
     public static final RegistryObject<Block> SATIVA_CROP = BLOCKS.register("sativa_crop",
             () -> new SativaCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> HAZE_CROP = BLOCKS.register("haze_crop",
+            () -> new HazeSativaCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> PURPLE_HAZE_CROP = BLOCKS.register("purple_haze_crop",
             () -> new PurpleHazeCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));

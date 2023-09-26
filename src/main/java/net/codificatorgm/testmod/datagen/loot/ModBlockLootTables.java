@@ -95,6 +95,13 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                         .setCount(UniformGenerator
                                                 .between(1.0F, 3.0F)).when(lootitemcondition$builder2)));
 
+        this.add(ModBlocks.HAZE_CROP.get(),
+                block -> createLikeStemDropsTwoItems(ModBlocks.HAZE_CROP.get()
+                        ,ModItems.HARVESTED_PURPLE_HAZE.get(), ModItems.WEED_LEAF.get())
+                        .apply(SetItemCountFunction
+                                .setCount(UniformGenerator
+                                        .between(1.0F, 3.0F)).when(lootitemcondition$builder2)));
+
 
         this.dropSelf(ModBlocks.HEMP_BLOCK.get());
         this.dropSelf(ModBlocks.HEMP_FENCE.get());

@@ -2,23 +2,22 @@ package net.codificatorgm.testmod.datagen;
 
 import net.codificatorgm.testmod.TestMod;
 import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.block.custom.HazeSativaCropBlock;
-import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
-import net.codificatorgm.testmod.block.custom.SativaCropBlock;
-import net.codificatorgm.testmod.block.custom.WeedCropBlock;
+import net.codificatorgm.testmod.block.custom.*;
+import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import javax.xml.crypto.Data;
 import java.util.function.Function;
 
-public class ModBlocksStateProvider extends BlockStateProvider {
+public class ModBlocksStateProvider extends BlockStateProvider implements DataProvider {
     public ModBlocksStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, TestMod.MOD_ID, exFileHelper);
     }
@@ -43,6 +42,7 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         doorBlockWithRenderType(((DoorBlock) ModBlocks.HEMP_DOOR.get()), modLoc("block/hemp_door_bottom"), modLoc("block/hemp_door_top"),"cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.HEMP_TRAPDOOR.get()), modLoc("block/hemp_trapdoor"),true,"cutout");
+        blockWithItem(ModBlocks.TEST);
 
     }
 
@@ -84,13 +84,11 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         ConfiguredModel[] models = new ConfiguredModel[1];
         models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((SativaCropBlock) block).getAgeProperty()),
                 new ResourceLocation(TestMod.MOD_ID, "block/" + textureName + state.getValue(((SativaCropBlock) block).getAgeProperty()))).renderType("cutout"));
-
         return models;
     }
 
     public void makeHazeCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> hazeStates(state, block, modelName, textureName);
-
         getVariantBuilder(block).forAllStates(function);
     }
 
@@ -101,7 +99,6 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         return models;
     }
-
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

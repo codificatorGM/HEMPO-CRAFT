@@ -3,19 +3,20 @@
 package net.codificatorgm.testmod.block;
 
 import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.block.custom.HazeSativaCropBlock;
-import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
-import net.codificatorgm.testmod.block.custom.SativaCropBlock;
-import net.codificatorgm.testmod.block.custom.WeedCropBlock;
+import net.codificatorgm.testmod.block.custom.*;
 import net.codificatorgm.testmod.item.ModItems;
-import net.minecraft.sounds.SoundEvent;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.ParticleUtils;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,7 +31,13 @@ public class ModBlocks {
            DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MOD_ID);
 
     public static final RegistryObject<Block> WEED_LEAVES = registerBlock("weed_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.GRASS).noOcclusion().ignitedByLava().pushReaction(PushReaction.DESTROY)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).strength(0.2F)
+                    .randomTicks().sound(SoundType.GRASS).noOcclusion()
+                    .ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    public static final RegistryObject<Block> TEST = registerBlock("test",
+            () -> new TestBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     public static final RegistryObject<Block> WEED_CROP = BLOCKS.register("weed_crop",
             () -> new WeedCropBlock(BlockBehaviour.Properties.copy(Blocks.CARROTS).noOcclusion().noCollission()));

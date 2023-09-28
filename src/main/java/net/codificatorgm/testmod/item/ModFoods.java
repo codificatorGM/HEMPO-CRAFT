@@ -5,7 +5,6 @@ import net.minecraft.world.effect.*;
 import net.minecraft.world.food.FoodProperties;
 
 
-
 public class ModFoods {
     public static final FoodProperties JOINT = new FoodProperties.Builder().nutrition(0)
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,
@@ -37,7 +36,6 @@ public class ModFoods {
             alwaysEat().build();
 
 
-
     public static final FoodProperties CANNAMILK = new FoodProperties.Builder().nutrition(0)
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,
                     300), 1f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 300), 1f).
@@ -51,7 +49,6 @@ public class ModFoods {
             effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 1800), 1f).
             effect(() -> new MobEffectInstance(MobEffects.LUCK, 3600), 1f).
             effect(() -> new MobEffectInstance(MobEffects.HUNGER, 700), 0.40f).
-
             build();
 
     public static final FoodProperties WEED_BROWNIE = new FoodProperties.Builder().nutrition(3)
@@ -71,13 +68,15 @@ public class ModFoods {
 
     public static final FoodProperties GRAPEFRUIT_SODA = new FoodProperties.Builder().nutrition(1)
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,
-                    1200), 1f).effect(() -> new MobEffectInstance(MobEffects.LUCK, 3600), 1f).
-            effect(() -> new MobEffectInstance(MobEffects.HEAL, 5, 1), 1f)
+                    1200), 1f).effect(() -> new MobEffectInstance(MobEffects.LUCK, 3600), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.HEAL, 5, 1), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 120, 1), 0.50f)
             .alwaysEat().build();
 
     public static final FoodProperties LEMON_SODA = new FoodProperties.Builder().nutrition(1)
             .saturationMod(0.2f).effect(() -> new MobEffectInstance(MobEffects.CONFUSION,
                     1200), 1f).effect(() -> new MobEffectInstance(MobEffects.LUCK, 3600), 1f).
-            effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 1200, 1), 1f).
-            alwaysEat().build();
+            effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 1200, 1), 1f)
+            .effect(() -> new MobEffectInstance(MobEffects.LEVITATION, 120, 2), 0.50f)
+            .alwaysEat().build();
 }

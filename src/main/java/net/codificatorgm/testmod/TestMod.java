@@ -3,6 +3,8 @@ package net.codificatorgm.testmod;
 import com.mojang.logging.LogUtils;
 import net.codificatorgm.testmod.block.ModBlocks;
 import net.codificatorgm.testmod.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -76,6 +78,7 @@ public class TestMod {
             event.accept(ModBlocks.HEMP_TRAPDOOR);
             event.accept(ModBlocks.HEMP_PRESSURE_PLATE);
             event.accept(ModBlocks.HEMP_FENCE_GATE);
+            event.accept(ModBlocks.TEST);
 
         }
     }

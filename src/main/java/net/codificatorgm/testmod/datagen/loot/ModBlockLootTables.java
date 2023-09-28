@@ -111,6 +111,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HEMP_FENCE_GATE.get());
         this.dropSelf(ModBlocks.HEMP_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.HEMP_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.TEST.get());
 
         this.add(ModBlocks.HEMP_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.HEMP_SLAB.get()));

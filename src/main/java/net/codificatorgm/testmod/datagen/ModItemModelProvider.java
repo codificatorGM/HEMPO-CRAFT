@@ -47,6 +47,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.HEMP_FENCE, ModBlocks.HEMP_BLOCK);
         buttonItem(ModBlocks.HEMP_BUTTON, ModBlocks.HEMP_BLOCK);
 
+
         evenSimplerBlockItem(ModBlocks.HEMP_STAIRS);
         evenSimplerBlockItem(ModBlocks.HEMP_SLAB);
         evenSimplerBlockItem(ModBlocks.HEMP_PRESSURE_PLATE);
@@ -65,6 +66,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(TestMod.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
+
+
 
     public void trapdoorItem(RegistryObject<Block> block) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),

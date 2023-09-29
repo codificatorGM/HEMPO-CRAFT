@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "testmod:block/bong"
+    },
+    "facing=south": {
+      "model": "testmod:block/bong",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "testmod:block/bong",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "testmod:block/bong",
+      "y": 90
+    }
+  }
+}

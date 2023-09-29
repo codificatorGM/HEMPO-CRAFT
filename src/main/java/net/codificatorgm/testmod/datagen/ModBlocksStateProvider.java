@@ -40,9 +40,11 @@ public class ModBlocksStateProvider extends BlockStateProvider implements DataPr
         fenceBlock(((FenceBlock) ModBlocks.HEMP_FENCE.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
         fenceGateBlock(((FenceGateBlock) ModBlocks.HEMP_FENCE_GATE.get()), blockTexture(ModBlocks.HEMP_BLOCK.get()));
 
-        doorBlockWithRenderType(((DoorBlock) ModBlocks.HEMP_DOOR.get()), modLoc("block/hemp_door_bottom"), modLoc("block/hemp_door_top"),"cutout");
-        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.HEMP_TRAPDOOR.get()), modLoc("block/hemp_trapdoor"),true,"cutout");
-        blockWithItem(ModBlocks.TEST);
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.HEMP_DOOR.get()), modLoc("block/hemp_door_bottom"), modLoc("block/hemp_door_top"), "cutout");
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.HEMP_TRAPDOOR.get()), modLoc("block/hemp_trapdoor"), true, "cutout");
+        blockWithItem(ModBlocks.BONG);
+        blockWithItem(ModBlocks.GROWTH_LIGHT);
+        blockWithItem(ModBlocks.PIPE);
 
     }
 
@@ -52,6 +54,7 @@ public class ModBlocksStateProvider extends BlockStateProvider implements DataPr
 
         getVariantBuilder(block).forAllStates(function);
     }
+
     public void makePurpleHazeCrop(CropBlock block, String modelName, String textureName) {
         Function<BlockState, ConfiguredModel[]> function = state -> purpleHazeStates(state, block, modelName, textureName);
         getVariantBuilder(block).forAllStates(function);
@@ -102,4 +105,5 @@ public class ModBlocksStateProvider extends BlockStateProvider implements DataPr
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
-    }}
+    }
+}

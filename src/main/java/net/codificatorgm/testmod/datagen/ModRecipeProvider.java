@@ -330,6 +330,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.HARVESTED_PURPLE_HAZE.get()), has(ModItems.HARVESTED_PURPLE_HAZE.get()))
                 .save(pWriter);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.GRINDER.get(), 1)
+                .requires(Items.IRON_INGOT, 1)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pWriter);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.HEMP_SLAB.get(), 6)
                 .pattern("###")
                 .define('#', ModBlocks.HEMP_BLOCK.get())

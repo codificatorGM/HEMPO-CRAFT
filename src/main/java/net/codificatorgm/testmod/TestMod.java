@@ -78,7 +78,10 @@ public class TestMod {
             event.accept(ModBlocks.HEMP_TRAPDOOR);
             event.accept(ModBlocks.HEMP_PRESSURE_PLATE);
             event.accept(ModBlocks.HEMP_FENCE_GATE);
-            event.accept(ModBlocks.TEST);
+            event.accept(ModBlocks.BONG);
+            event.accept(ModBlocks.GROWTH_LIGHT);
+            event.accept(ModBlocks.GRINDER);
+
 
         }
     }

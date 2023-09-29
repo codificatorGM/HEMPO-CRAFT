@@ -42,7 +42,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .add(LootItem.lootTableItem(pItem)
                                         .apply(StemBlock.AGE.getPossibleValues(), (p_249795_) -> {
                                             return SetItemCountFunction.setCount(
-                                                    BinomialDistributionGenerator.binomial(3, (float)(p_249795_ + 1) / 15.0F)
+                                                    BinomialDistributionGenerator.binomial(3, (float) (p_249795_ + 1) / 15.0F)
                                             ).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock)
                                                     .setProperties(StatePropertiesPredicate.Builder.properties()
                                                             .hasProperty(StemBlock.AGE, p_249795_))
@@ -52,7 +52,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                 .add(LootItem.lootTableItem(pItem2)
                                         .apply(StemBlock.AGE.getPossibleValues(), (p_249795_) -> {
                                             return SetItemCountFunction.setCount(
-                                                    BinomialDistributionGenerator.binomial(3, (float)(p_249795_ + 1) / 15.0F)
+                                                    BinomialDistributionGenerator.binomial(3, (float) (p_249795_ + 1) / 15.0F)
                                             ).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(pBlock)
                                                     .setProperties(StatePropertiesPredicate.Builder.properties()
                                                             .hasProperty(StemBlock.AGE, p_249795_))
@@ -90,14 +90,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.SATIVA_CROP.get(),
                 block -> createLikeStemDropsTwoItems(ModBlocks.SATIVA_CROP.get()
-                        ,ModItems.HARVESTED_WEED.get(), ModItems.WEED_LEAF.get())
-                                .apply(SetItemCountFunction
-                                        .setCount(UniformGenerator
-                                                .between(1.0F, 3.0F)).when(lootitemcondition$builder2)));
+                        , ModItems.HARVESTED_WEED.get(), ModItems.WEED_LEAF.get())
+                        .apply(SetItemCountFunction
+                                .setCount(UniformGenerator
+                                        .between(1.0F, 3.0F)).when(lootitemcondition$builder2)));
 
         this.add(ModBlocks.HAZE_CROP.get(),
                 block -> createLikeStemDropsTwoItems(ModBlocks.HAZE_CROP.get()
-                        ,ModItems.HARVESTED_PURPLE_HAZE.get(), ModItems.WEED_LEAF.get())
+                        , ModItems.HARVESTED_PURPLE_HAZE.get(), ModItems.WEED_LEAF.get())
                         .apply(SetItemCountFunction
                                 .setCount(UniformGenerator
                                         .between(1.0F, 3.0F)).when(lootitemcondition$builder2)));
@@ -111,7 +111,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HEMP_FENCE_GATE.get());
         this.dropSelf(ModBlocks.HEMP_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.HEMP_TRAPDOOR.get());
-        this.dropSelf(ModBlocks.TEST.get());
+        this.dropSelf(ModBlocks.GRINDER.get());
+
+        this.add(ModBlocks.PIPE.get(),
+                block -> createSilkTouchOnlyTable(ModBlocks.PIPE.get()));
+
+        this.add(ModBlocks.GROWTH_LIGHT.get(),
+                block -> createSilkTouchOnlyTable(ModBlocks.GROWTH_LIGHT.get()));
+
+        this.add(ModBlocks.BONG.get(),
+                block -> createSilkTouchOnlyTable(ModBlocks.BONG.get()));
+
 
         this.add(ModBlocks.HEMP_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.HEMP_SLAB.get()));

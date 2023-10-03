@@ -22,6 +22,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.WEED_LEAVES.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(ModBlocks.HEMP_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.GROWTH_LIGHT.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(ModBlocks.WEEDMATIC.get());
 
         this.tag(BlockTags.FENCES).add(ModBlocks.HEMP_FENCE.get());
         this.tag(BlockTags.FENCE_GATES).add(ModBlocks.HEMP_FENCE_GATE.get());

@@ -7,7 +7,6 @@ import net.codificatorgm.testmod.block.custom.*;
 import net.codificatorgm.testmod.block.custom.LightBlock;
 import net.codificatorgm.testmod.block.custom.PipeBlock;
 import net.codificatorgm.testmod.item.ModItems;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -42,7 +41,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> PIPE = registerBlock("pipe",
             () -> new PipeBlock(BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD)));
 
-
+    public static final RegistryObject<Block> WEEDMATIC = registerBlock("weedmatic",
+            () -> new WeedMaticBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
     public static final RegistryObject<Block> GROWTH_LIGHT = registerBlock("growth_light",
             () -> new LightBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GLASS)
                     .lightLevel((value -> 15))
@@ -61,7 +61,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> HEMP_BLOCK = registerBlock("hemp_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)
-                    .ignitedByLava()));
+                    .ignitedByLava()
+                    ));
 
     public static final RegistryObject<Block> HEMP_STAIRS = registerBlock("hemp_stairs",
             () -> new StairBlock(() -> ModBlocks.HEMP_BLOCK.get().defaultBlockState(),

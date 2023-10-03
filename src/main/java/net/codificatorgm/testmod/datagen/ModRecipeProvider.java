@@ -267,21 +267,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.EGG), has(Items.EGG))
                 .save(pWriter);
 
-    //    ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAPEFRUIT_SODA.get(), 1)
-   //             .requires(ModItems.PURPLE_HAZE_BUD.get(), 3)
-  //              .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
-   //             .requires(Items.CHORUS_FRUIT, 2)
-  //              .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
- //               .requires(Ingredient.of(PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.WATER)))
- //               .save(pWriter);
-
+       ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAPEFRUIT_SODA.get(), 1)
+               .requires(ModItems.PURPLE_HAZE_BUD.get(), 3)
+               .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
+               .requires(Items.CHORUS_FRUIT, 2)
+               .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
+               .requires(Items.GLASS_BOTTLE, 1)
+               .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
+                .save(pWriter);
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LEMON_SODA.get(), 1)
                 .requires(ModItems.WEED_BUD.get(), 3)
                 .unlockedBy(getHasName(ModItems.WEED_BUD.get()), has(ModItems.WEED_BUD.get()))
                 .requires(Items.SLIME_BALL, 1)
-                .unlockedBy(getHasName(Items.CHORUS_FRUIT), has(Items.CHORUS_FRUIT))
+                .unlockedBy(getHasName(Items.SLIME_BALL), has(Items.SLIME_BALL))
                 .requires(Items.GLASS_BOTTLE, 1)
                 .unlockedBy(getHasName(Items.GLASS_BOTTLE), has(Items.GLASS_BOTTLE))
                 .save(pWriter);
@@ -294,6 +294,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.NETHERITE_INGOT, 1)
                 .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
                 .save(pWriter);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.HEMP_BLOCK.get(), 9)
                 .requires(ModItems.WEED_LEAF.get(), 3)
@@ -334,6 +335,57 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.IRON_INGOT, 1)
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(pWriter);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WEEDMATIC.get(), 1)
+                .pattern("GIR")
+                .pattern("WIR")
+                .pattern("BIR")
+                .define('I', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .define('R', Items.REDSTONE)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .define('G', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .define('W', Items.GLASS)
+                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+                .define('B', Items.IRON_BLOCK)
+                .unlockedBy(getHasName(Items.IRON_BLOCK), has(Items.IRON_BLOCK))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GROWTH_LIGHT.get(), 2)
+                .pattern("###")
+                .pattern("WGW")
+                .define('#', Items.COPPER_INGOT)
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .define('W', Items.GLASS)
+                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+                .define('G', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PIPE.get(), 1)
+                .pattern("AAG")
+                .define('A', Items.AMETHYST_SHARD)
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .define('G', Items.GLASS)
+                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BONG.get(), 1)
+                .pattern("R ")
+                .pattern("YG")
+                .pattern("# ")
+                .define('R', Items.RED_STAINED_GLASS)
+                .unlockedBy(getHasName(Items.RED_STAINED_GLASS), has(Items.RED_STAINED_GLASS))
+                .define('Y', Items.YELLOW_STAINED_GLASS)
+                .unlockedBy(getHasName(Items.YELLOW_STAINED_GLASS), has(Items.YELLOW_STAINED_GLASS))
+                .define('#', Items.GREEN_STAINED_GLASS)
+                .unlockedBy(getHasName(Items.GREEN_STAINED_GLASS), has(Items.GREEN_STAINED_GLASS))
+                .define('G', Items.GLASS)
+                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+                .save(pWriter);
+
 
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.HEMP_SLAB.get(), 6)

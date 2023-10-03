@@ -27,5 +27,11 @@
   "block.testmod.hemp_fence": "Hemp Fence",
   "block.testmod.hemp_fence_gate": "Hemp Fence Gate",
   "block.testmod.hemp_door": "Hemp Door",
-  "block.testmod.hemp_trapdoor": "Hemp Trapdoor"
+  "block.testmod.bong": "Bong",
+  "block.testmod.pipe": "Pipe",
+  "block.testmod.growth_light": "Growth Light",
+  "block.testmod.grinder": "Grinder",
+  "block.testmod.weedmatic": "WeedFiller",
+  "block.testmod.hemp_trapdoor": "Hemp Trapdoor",
+  "creativetab.test_tab": "WeedO'Craft"
 }

@@ -112,6 +112,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HEMP_PRESSURE_PLATE.get());
         this.dropSelf(ModBlocks.HEMP_TRAPDOOR.get());
         this.dropSelf(ModBlocks.GRINDER.get());
+        this.dropSelf(ModBlocks.WEEDMATIC.get());
+
 
         this.add(ModBlocks.PIPE.get(),
                 block -> createSilkTouchOnlyTable(ModBlocks.PIPE.get()));

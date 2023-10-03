@@ -42,3 +42,9 @@ WAX + PEN = FILLED WAX PEN
 
 		BUGS 
 FIX RECIPES FOR PLANKS
+
+---------------------------------------------------------------
+
+JOINT ROLLER --> HAS ITEMS IN INVENTORY RIGHT CLICK
+GIVE ITEM 
+

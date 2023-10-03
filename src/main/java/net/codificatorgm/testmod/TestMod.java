@@ -1,10 +1,13 @@
 package net.codificatorgm.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.codificatorgm.testmod.potion.ModPotions;
 import net.codificatorgm.testmod.block.ModBlocks;
+import net.codificatorgm.testmod.block.entity.ModBlockEntities;
 import net.codificatorgm.testmod.item.ModItems;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+//import net.codificatorgm.testmod.screen.ModMenuTypes;
+//import net.codificatorgm.testmod.screen.WeedMaticScreen;
+import net.codificatorgm.testmod.tab.ModTabs;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,12 +37,16 @@ public class TestMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModPotions.register(modEventBus);
+        ModTabs.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+        ModBlockEntities.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -48,42 +55,6 @@ public class TestMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.WEED_LEAF);
-            event.accept(ModBlocks.WEED_LEAVES);
-            event.accept(ModItems.WEED_SEEDS);
-            event.accept(ModItems.WEED_BUD);
-            event.accept(ModItems.HARVESTED_WEED);
-            event.accept(ModItems.PURPLE_HAZE_SEEDS);
-            event.accept(ModItems.PURPLE_HAZE_BUD);
-            event.accept(ModItems.HARVESTED_PURPLE_HAZE);
-            event.accept(ModItems.SATIVA_SEEDS);
-            event.accept(ModItems.HAZE_SATIVA_SEEDS);
-            event.accept(ModItems.LEMON_SODA);
-            event.accept(ModItems.GRAPEFRUIT_SODA);
-            event.accept(ModItems.JOINT);
-            event.accept(ModItems.BLUNT);
-            event.accept(ModItems.PURPLE_HAZE_JOINT);
-            event.accept(ModItems.PURPLE_HAZE_BLUNT);
-            event.accept(ModItems.CANNAMILK);
-            event.accept(ModItems.WEED_COOKIE);
-            event.accept(ModItems.WEED_MUFFIN);
-            event.accept(ModItems.WEED_BROWNIE);
-            event.accept(ModBlocks.HEMP_BLOCK);
-            event.accept(ModBlocks.HEMP_STAIRS);
-            event.accept(ModBlocks.HEMP_BUTTON);
-            event.accept(ModBlocks.HEMP_FENCE);
-            event.accept(ModBlocks.HEMP_DOOR);
-            event.accept(ModBlocks.HEMP_SLAB);
-            event.accept(ModBlocks.HEMP_TRAPDOOR);
-            event.accept(ModBlocks.HEMP_PRESSURE_PLATE);
-            event.accept(ModBlocks.HEMP_FENCE_GATE);
-            event.accept(ModBlocks.BONG);
-            event.accept(ModBlocks.GROWTH_LIGHT);
-            event.accept(ModBlocks.GRINDER);
-
-
-        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

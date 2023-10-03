@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-29T02:05:30.305491	Loot Tables
+// 1.20.1	2023-09-29T18:05:20.0788551	Loot Tables
 135ed3cf9fbcf8d33899ac6da2a3f2094bc5c116 data/testmod/loot_tables/blocks/bong.json
 425872d18b413c048260c623b41295b89cc46368 data/testmod/loot_tables/blocks/grinder.json
 e67872b0cbf0164152bd45fd789364eddbd62a24 data/testmod/loot_tables/blocks/growth_light.json
@@ -12,8 +12,9 @@ f19c6b9f9232c2c667738255df4856f25ba77cf4 data/testmod/loot_tables/blocks/hemp_fe
 dc099569d5e1dfc70ac657e056f965983115fe2c data/testmod/loot_tables/blocks/hemp_slab.json
 dc5917ecabc63d7cd193d85ec088290e8e40be86 data/testmod/loot_tables/blocks/hemp_stairs.json
 044c328f7912a1c8662a031f0552eaa160f322f8 data/testmod/loot_tables/blocks/hemp_trapdoor.json
-86186859f10e00d588bbf45749db9f774819978e data/testmod/loot_tables/blocks/pipe.json
+4359fd4f67b1a22603b4389b25a07cf68c5be7f0 data/testmod/loot_tables/blocks/pipe.json
 6e2f74fbee4c4c81822bcd1e0d693ed9eee7ae3b data/testmod/loot_tables/blocks/purple_haze_crop.json
 393458edc1ec05354b340ca713a7c6e012b9a578 data/testmod/loot_tables/blocks/sativa_crop.json
+16fe5e54c3135ea086fabe37afed522e8af2107f data/testmod/loot_tables/blocks/weedmatic.json
 7856feb36a67f4794ffe8d0d7fa3362e5e8c2fba data/testmod/loot_tables/blocks/weed_crop.json
 a62e712603a699c3cdf14e31431971ad77b5439a data/testmod/loot_tables/blocks/weed_leaves.json

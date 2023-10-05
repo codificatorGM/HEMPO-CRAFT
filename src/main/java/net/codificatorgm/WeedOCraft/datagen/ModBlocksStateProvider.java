@@ -1,8 +1,8 @@
-package net.codificatorgm.testmod.datagen;
+package net.codificatorgm.WeedOCraft.datagen;
 
-import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.block.custom.*;
+import net.codificatorgm.WeedOCraft.TestMod;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.block.custom.*;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -11,10 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import javax.xml.crypto.Data;
 import java.util.function.Function;
 
 public class ModBlocksStateProvider extends BlockStateProvider implements DataProvider {

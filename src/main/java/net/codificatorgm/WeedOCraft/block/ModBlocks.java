@@ -1,12 +1,12 @@
 
 
-package net.codificatorgm.testmod.block;
+package net.codificatorgm.WeedOCraft.block;
 
-import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.block.custom.*;
-import net.codificatorgm.testmod.block.custom.LightBlock;
-import net.codificatorgm.testmod.block.custom.PipeBlock;
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.TestMod;
+import net.codificatorgm.WeedOCraft.block.custom.*;
+import net.codificatorgm.WeedOCraft.block.custom.LightBlock;
+import net.codificatorgm.WeedOCraft.block.custom.PipeBlock;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

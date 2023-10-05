@@ -1,14 +1,13 @@
-package net.codificatorgm.testmod;
+package net.codificatorgm.WeedOCraft;
 
 import com.mojang.logging.LogUtils;
-import net.codificatorgm.testmod.potion.ModPotions;
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.block.entity.ModBlockEntities;
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.potion.ModPotions;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.block.entity.ModBlockEntities;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 //import net.codificatorgm.testmod.screen.ModMenuTypes;
 //import net.codificatorgm.testmod.screen.WeedMaticScreen;
-import net.codificatorgm.testmod.tab.ModTabs;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.codificatorgm.WeedOCraft.tab.ModTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;

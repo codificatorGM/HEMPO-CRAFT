@@ -1,4 +1,4 @@
-package net.codificatorgm.testmod.item.custom;
+package net.codificatorgm.WeedOCraft.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -42,7 +42,7 @@ public class PurpleHazeJoint extends Item {
 
 
         } else {
-            pPlayer.sendSystemMessage(Component.literal("You need a Flint and Steel to light the Haze Joint!"));
+            pPlayer.sendSystemMessage(Component.literal("You need a full Flint and Steel to light the Haze Joint!"));
         }
         return InteractionResultHolder.success(item);
     }

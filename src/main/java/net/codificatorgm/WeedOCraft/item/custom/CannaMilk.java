@@ -1,10 +1,9 @@
-package net.codificatorgm.testmod.item.custom;
+package net.codificatorgm.WeedOCraft.item.custom;
 
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;

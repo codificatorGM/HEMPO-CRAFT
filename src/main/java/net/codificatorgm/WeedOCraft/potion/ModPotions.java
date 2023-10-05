@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.potion;
+package net.codificatorgm.WeedOCraft.potion;
 
-import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.WeedOCraft.TestMod;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.alchemy.Potion;

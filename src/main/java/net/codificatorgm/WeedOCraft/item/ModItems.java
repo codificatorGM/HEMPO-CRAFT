@@ -44,6 +44,7 @@ public class ModItems {
     public static final RegistryObject<Item> WEED_COOKIE = ITEMS.register("weed_cookie",
             () -> new Item(new Item.Properties().food(ModFoods.WEED_COOKIE)));
 
+
     public static final RegistryObject<Item> WEED_BROWNIE = ITEMS.register("weed_brownie",
             () -> new Item(new Item.Properties().food(ModFoods.WEED_BROWNIE)));
 

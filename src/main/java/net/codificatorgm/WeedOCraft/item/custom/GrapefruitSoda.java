@@ -1,4 +1,4 @@
-package net.codificatorgm.testmod.item.custom;
+package net.codificatorgm.WeedOCraft.item.custom;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;

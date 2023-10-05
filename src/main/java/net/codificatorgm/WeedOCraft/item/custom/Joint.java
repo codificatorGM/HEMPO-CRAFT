@@ -1,4 +1,4 @@
-package net.codificatorgm.testmod.item.custom;
+package net.codificatorgm.WeedOCraft.item.custom;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -6,12 +6,12 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 
 
@@ -20,11 +20,15 @@ public class Joint extends Item {
         super(pProperties);
     }
 
+
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
 
+        ItemStack flint = new ItemStack(Items.FLINT_AND_STEEL);
         ItemStack item = pPlayer.getItemInHand(pUsedHand);
-        if (pPlayer.getInventory().contains(new ItemStack(Items.FLINT_AND_STEEL))) {
+        boolean cont = pPlayer.getInventory().contains(flint);
+
+        if (cont) {
             if (item.getDamageValue() == 3) {
                 pPlayer.playSound(SoundEvents.FIRE_EXTINGUISH, 2, 2);
             } else if (item.getDamageValue() == 0) {
@@ -44,7 +48,7 @@ public class Joint extends Item {
 
 
         } else {
-            pPlayer.sendSystemMessage(Component.literal("You need a Flint and Steel to light the Joint!"));
+            pPlayer.sendSystemMessage(Component.literal("You need a full Flint and Steel to light the Joint!"));
         }
         return InteractionResultHolder.success(item);
     }

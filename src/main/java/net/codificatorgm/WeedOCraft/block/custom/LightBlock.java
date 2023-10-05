@@ -1,13 +1,10 @@
-package net.codificatorgm.testmod.block.custom;
+package net.codificatorgm.WeedOCraft.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -15,11 +12,11 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class GrinderBlock extends HorizontalDirectionalBlock {
-    public static final VoxelShape AABB = Block.box(0.0D, 0.0D, 0.0D, 11.0D, 3.0D, 11.0D);
+public class LightBlock extends HorizontalDirectionalBlock {
+    public static final VoxelShape AABB = Block.box(0.0D, 14.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public GrinderBlock(Properties pProperties) {
+    public LightBlock(Properties pProperties) {
         super(pProperties);
     }
 

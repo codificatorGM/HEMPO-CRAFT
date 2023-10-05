@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.screen;
+package net.codificatorgm.WeedOCraft.screen;
 
-import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.WeedOCraft.TestMod;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;

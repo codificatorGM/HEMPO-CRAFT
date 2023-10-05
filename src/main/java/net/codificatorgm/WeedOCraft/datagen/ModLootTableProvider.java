@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.datagen;
+package net.codificatorgm.WeedOCraft.datagen;
 
-import net.codificatorgm.testmod.datagen.loot.ModBlockLootTables;
+import net.codificatorgm.WeedOCraft.datagen.loot.ModBlockLootTables;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;

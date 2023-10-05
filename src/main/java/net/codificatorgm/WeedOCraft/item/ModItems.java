@@ -1,19 +1,15 @@
-package net.codificatorgm.testmod.item;
+package net.codificatorgm.WeedOCraft.item;
 
-import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.item.custom.*;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
+import net.codificatorgm.WeedOCraft.TestMod;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.item.custom.*;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ModItems {
 
@@ -41,6 +37,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CANNAMILK = ITEMS.register("cannamilk",
             () -> new CannaMilk(new Item.Properties().durability(2)));
+
+    public static final RegistryObject<Item> COOKED_EGG = ITEMS.register("cooked_egg",
+            () -> new Item(new Item.Properties().food(Foods.BAKED_POTATO)));
 
     public static final RegistryObject<Item> WEED_COOKIE = ITEMS.register("weed_cookie",
             () -> new Item(new Item.Properties().food(ModFoods.WEED_COOKIE)));

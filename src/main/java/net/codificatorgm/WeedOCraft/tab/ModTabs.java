@@ -1,15 +1,13 @@
-package net.codificatorgm.testmod.tab;
+package net.codificatorgm.WeedOCraft.tab;
 
-import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.TestMod;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModTabs {
@@ -42,6 +40,7 @@ public class ModTabs {
                         event.accept(ModItems.WEED_COOKIE.get());
                         event.accept(ModItems.WEED_MUFFIN.get());
                         event.accept(ModItems.WEED_BROWNIE.get());
+                        event.accept(ModItems.COOKED_EGG.get());
                         event.accept(ModBlocks.HEMP_BLOCK.get());
                         event.accept(ModBlocks.HEMP_STAIRS.get());
                         event.accept(ModBlocks.HEMP_BUTTON.get());

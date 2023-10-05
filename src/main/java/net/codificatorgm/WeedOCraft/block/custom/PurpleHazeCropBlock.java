@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.block.custom;
+package net.codificatorgm.WeedOCraft.block.custom;
 
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;

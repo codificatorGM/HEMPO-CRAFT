@@ -1,4 +1,4 @@
-package net.codificatorgm.testmod.block.custom;
+package net.codificatorgm.WeedOCraft.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;

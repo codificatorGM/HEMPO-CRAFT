@@ -1,33 +1,29 @@
-package net.codificatorgm.testmod.datagen.loot;
+package net.codificatorgm.WeedOCraft.datagen.loot;
 
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.block.custom.PurpleHazeCropBlock;
-import net.codificatorgm.testmod.block.custom.SativaCropBlock;
-import net.codificatorgm.testmod.block.custom.WeedCropBlock;
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.block.custom.PurpleHazeCropBlock;
+import net.codificatorgm.WeedOCraft.block.custom.SativaCropBlock;
+import net.codificatorgm.WeedOCraft.block.custom.WeedCropBlock;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.StemBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
-import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Set;
-import java.util.function.Function;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
     public ModBlockLootTables() {

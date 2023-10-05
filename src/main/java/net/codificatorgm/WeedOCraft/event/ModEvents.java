@@ -1,8 +1,8 @@
-package net.codificatorgm.testmod.event;
+package net.codificatorgm.WeedOCraft.event;
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
-import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.TestMod;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;

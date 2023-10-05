@@ -1,7 +1,7 @@
-package net.codificatorgm.testmod.datagen;
+package net.codificatorgm.WeedOCraft.datagen;
 
-import net.codificatorgm.testmod.TestMod;
-import net.codificatorgm.testmod.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.TestMod;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

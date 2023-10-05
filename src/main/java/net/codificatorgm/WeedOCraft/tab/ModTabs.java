@@ -42,6 +42,7 @@ public class ModTabs {
                         event.accept(ModItems.WEED_BROWNIE.get());
                         event.accept(ModItems.COOKED_EGG.get());
                         event.accept(ModBlocks.HEMP_BLOCK.get());
+                        event.accept(ModBlocks.REINFORCED_HEMP_BLOCK.get());
                         event.accept(ModBlocks.HEMP_STAIRS.get());
                         event.accept(ModBlocks.HEMP_BUTTON.get());
                         event.accept(ModBlocks.HEMP_FENCE.get());

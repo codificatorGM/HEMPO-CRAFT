@@ -109,6 +109,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.HEMP_TRAPDOOR.get());
         this.dropSelf(ModBlocks.GRINDER.get());
         this.dropSelf(ModBlocks.WEEDMATIC.get());
+        this.dropSelf(ModBlocks.REINFORCED_HEMP_BLOCK.get());
 
 
         this.add(ModBlocks.PIPE.get(),

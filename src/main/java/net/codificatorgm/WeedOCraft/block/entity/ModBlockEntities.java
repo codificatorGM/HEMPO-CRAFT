@@ -1,8 +1,8 @@
-package net.codificatorgm.testmod.block.entity;
+package net.codificatorgm.WeedOCraft.block.entity;
 
-import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.WeedOCraft.TestMod;
 
-import net.codificatorgm.testmod.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

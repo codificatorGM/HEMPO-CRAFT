@@ -1,5 +1,5 @@
 
-package net.codificatorgm.testmod.item;
+package net.codificatorgm.WeedOCraft.item;
 
 import net.minecraft.world.effect.*;
 import net.minecraft.world.food.FoodProperties;

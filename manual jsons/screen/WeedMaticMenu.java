@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.screen;
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.block.entity.WeedMaticEntity;
+package net.codificatorgm.WeedOCraft.screen;
+import net.codificatorgm.WeedOCraft.block.ModBlocks;
+import net.codificatorgm.WeedOCraft.block.entity.WeedMaticEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;

@@ -1,4 +1,4 @@
-package net.codificatorgm.testmod.screen;
+package net.codificatorgm.WeedOCraft.screen;
 
 import net.minecraft.client.gui.screens.recipebook.AbstractFurnaceRecipeBookComponent;
 import net.minecraft.client.gui.screens.recipebook.BlastingRecipeBookComponent;

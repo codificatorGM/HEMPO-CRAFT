@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.datagen;
+package net.codificatorgm.WeedOCraft.datagen;
 
-import net.codificatorgm.testmod.TestMod;
+import net.codificatorgm.WeedOCraft.TestMod;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

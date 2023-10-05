@@ -1,6 +1,6 @@
-package net.codificatorgm.testmod.block.custom;
+package net.codificatorgm.WeedOCraft.block.custom;
 
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
@@ -8,8 +8,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-
-import java.util.Properties;
 
 public class WeedCropBlock extends CropBlock {
     public static final int MAX_AGE = 5;

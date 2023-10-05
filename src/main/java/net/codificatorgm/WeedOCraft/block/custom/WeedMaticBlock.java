@@ -1,19 +1,15 @@
-package net.codificatorgm.testmod.block.custom;
+package net.codificatorgm.WeedOCraft.block.custom;
 
-import net.codificatorgm.testmod.block.ModBlocks;
-import net.codificatorgm.testmod.block.entity.ModBlockEntities;
-import net.codificatorgm.testmod.block.entity.WeedMaticEntity;
-import net.codificatorgm.testmod.item.ModItems;
+import net.codificatorgm.WeedOCraft.block.entity.ModBlockEntities;
+import net.codificatorgm.WeedOCraft.block.entity.WeedMaticEntity;
+import net.codificatorgm.WeedOCraft.item.ModItems;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
-import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -31,12 +27,9 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.function.Predicate;
 
 public class WeedMaticBlock extends Block implements EntityBlock {
     public static final VoxelShape AABB = Block.box(0.0D, 0.0D, 0.0D, 14.0D, 32.0D, 14.0D);

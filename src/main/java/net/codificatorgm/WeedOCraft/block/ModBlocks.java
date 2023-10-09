@@ -49,6 +49,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WEEDMATIC = registerBlock("weedmatic",
             () -> new WeedMaticBlock(BlockBehaviour.Properties.copy(Blocks.ANVIL)));
+
+    public static final RegistryObject<Block> ROLLING_MACHINE = registerBlock("rolling_machine",
+            () -> new RollingMachineBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)
+                    .destroyTime(0.1f)
+                    .strength(0.1f)));
     public static final RegistryObject<Block> GROWTH_LIGHT = registerBlock("growth_light",
             () -> new LightBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GLASS)
                     .lightLevel((value -> 15))

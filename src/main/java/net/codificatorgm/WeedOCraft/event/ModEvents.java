@@ -3,11 +3,16 @@ package net.codificatorgm.WeedOCraft.event;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.codificatorgm.WeedOCraft.TestMod;
 import net.codificatorgm.WeedOCraft.item.ModItems;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.ai.behavior.Behavior;
+import net.minecraft.world.entity.ai.behavior.SleepInBed;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
+import net.minecraftforge.event.level.SleepFinishedTimeEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -53,6 +58,15 @@ public class ModEvents {
                     1, 24, 0.075f));
         }
 
+    }
+
+    @SubscribeEvent
+    public static void addSleepEvent(PlayerWakeUpEvent event) {
+        if (!event.getEntity().level().isClientSide()) {
+            if (event.getEntity().hasEffect(MobEffects.CONFUSION)) {
+                event.getEntity().removeAllEffects();
+            }
+        }
     }
 
     @SubscribeEvent

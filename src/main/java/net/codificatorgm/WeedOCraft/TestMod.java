@@ -8,8 +8,11 @@ import net.codificatorgm.WeedOCraft.item.ModItems;
 //import net.codificatorgm.testmod.screen.ModMenuTypes;
 //import net.codificatorgm.testmod.screen.WeedMaticScreen;
 import net.codificatorgm.WeedOCraft.tab.ModTabs;
+import net.codificatorgm.WeedOCraft.util.BetterBrewingRecipe;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,6 +43,7 @@ public class TestMod {
         ModTabs.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::setup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
@@ -68,5 +72,15 @@ public class TestMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
         }
+    }
+
+    private void setup (final FMLCommonSetupEvent event){
+        event.enqueueWork(() -> {
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                    ModItems.HARVESTED_WEED.get(), ModPotions.LEMON_SODA.get()));
+            
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
+                    ModItems.HARVESTED_PURPLE_HAZE.get(), ModPotions.GRAPEFRUIT_SODA.get()));
+        });
     }
 }

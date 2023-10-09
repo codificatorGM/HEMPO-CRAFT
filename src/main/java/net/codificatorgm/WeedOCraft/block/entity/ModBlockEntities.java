@@ -18,6 +18,11 @@ public class ModBlockEntities {
                     () -> BlockEntityType.Builder.of(WeedMaticEntity::new,
                             ModBlocks.WEEDMATIC.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<RollingMachineEntity>> ROLLING_MACHINE =
+            BLOCK_ENTITIES.register("rolling_machine",
+                    () -> BlockEntityType.Builder.of(RollingMachineEntity::new,
+                            ModBlocks.ROLLING_MACHINE.get()).build(null));
+
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

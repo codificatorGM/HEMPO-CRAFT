@@ -34,6 +34,8 @@
   "block.testmod.growth_light": "Growth Light",
   "block.testmod.grinder": "Grinder",
   "block.testmod.weedmatic": "Canna Filler",
+  "block.testmod.rolling_machine": "Rolling Machine",
   "block.testmod.hemp_trapdoor": "Hemp Trapdoor",
+  "potion.testmod.grapefruit_sodas": "Experimental Potions",
   "creativetab.test_tab": "WeedO'Craft"
 }

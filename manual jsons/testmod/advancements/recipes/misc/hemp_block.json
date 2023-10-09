@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:hemp_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weed_leaf": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:weed_leaf"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_weed_leaves": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:weed_leaves"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_weed_leaf",
+      "has_weed_leaves",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:hemp_block"
+    ]
+  },
+  "sends_telemetry_event": false
+}

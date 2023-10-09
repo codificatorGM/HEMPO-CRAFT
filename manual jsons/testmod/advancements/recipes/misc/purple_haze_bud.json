@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_harvested_purple_haze": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:harvested_purple_haze"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:purple_haze_bud"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_harvested_purple_haze",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:purple_haze_bud"
+    ]
+  },
+  "sends_telemetry_event": false
+}

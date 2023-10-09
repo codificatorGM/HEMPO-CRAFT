@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "item": "testmod:cannamilk"
+  }
+}

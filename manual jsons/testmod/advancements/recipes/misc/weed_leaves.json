@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:weed_leaves"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weed_leaf": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:weed_leaf"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_weed_leaf",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:weed_leaves"
+    ]
+  },
+  "sends_telemetry_event": false
+}

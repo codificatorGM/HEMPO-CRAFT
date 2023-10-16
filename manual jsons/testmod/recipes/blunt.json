@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "testmod:weed_leaf"
+    }
+  ],
+  "result": {
+    "item": "testmod:blunt"
+  }
+}

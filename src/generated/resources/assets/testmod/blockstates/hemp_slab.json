@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "testmod:block/hemp_slab"
+    },
+    "type=double": {
+      "model": "testmod:block/hemp_block"
+    },
+    "type=top": {
+      "model": "testmod:block/hemp_slab_top"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_leaf"
+    },
+    {
+      "item": "testmod:weed_leaf"
+    },
+    {
+      "item": "testmod:weed_leaf"
+    },
+    {
+      "item": "testmod:weed_leaves"
+    },
+    {
+      "item": "testmod:weed_leaves"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "testmod:hemp_block"
+  }
+}

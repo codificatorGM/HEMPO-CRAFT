@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "item": "testmod:lemon_soda"
+  }
+}

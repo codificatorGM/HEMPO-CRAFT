@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "W": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "GIR",
+    "WIR",
+    "BIR"
+  ],
+  "result": {
+    "item": "testmod:weedmatic"
+  },
+  "show_notification": true
+}

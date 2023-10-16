@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "minecraft:cookie"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "testmod:weed_cookie"
+  }
+}

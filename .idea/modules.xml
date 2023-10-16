@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/HEMPO-CRAFT-master.iml" filepath="$PROJECT_DIR$/.idea/HEMPO-CRAFT-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HEMPO-CRAFT-master.HEMPO-CRAFT-master.main.iml" filepath="$PROJECT_DIR$/.idea/modules/HEMPO-CRAFT-master.HEMPO-CRAFT-master.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HEMPO-CRAFT-master.HEMPO-CRAFT-master.test.iml" filepath="$PROJECT_DIR$/.idea/modules/HEMPO-CRAFT-master.HEMPO-CRAFT-master.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.codificatorgm.testmod.HEMPO-CRAFT-master.main.iml" filepath="$PROJECT_DIR$/.idea/modules/net.codificatorgm.testmod.HEMPO-CRAFT-master.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/net.codificatorgm.testmod.HEMPO-CRAFT-master.test.iml" filepath="$PROJECT_DIR$/.idea/modules/net.codificatorgm.testmod.HEMPO-CRAFT-master.test.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:purple_haze_bud"
+    }
+  ],
+  "result": {
+    "item": "testmod:purple_haze_seeds"
+  }
+}

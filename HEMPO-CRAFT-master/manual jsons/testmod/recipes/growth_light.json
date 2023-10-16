@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:copper_ingot"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "W": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "###",
+    "WGW"
+  ],
+  "result": {
+    "count": 2,
+    "item": "testmod:growth_light"
+  },
+  "show_notification": true
+}

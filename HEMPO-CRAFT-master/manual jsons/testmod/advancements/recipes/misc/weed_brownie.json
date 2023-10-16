@@ -1,0 +1,74 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cocoa_beans": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:cocoa_beans"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_egg": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:egg"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:weed_brownie"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weed_bud": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:weed_bud"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_wheat": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:wheat"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_weed_bud",
+      "has_cocoa_beans",
+      "has_wheat",
+      "has_egg",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:weed_brownie"
+    ]
+  },
+  "sends_telemetry_event": false
+}

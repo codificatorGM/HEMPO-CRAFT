@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "testmod:weed_bud"
+    },
+    {
+      "item": "minecraft:golden_carrot"
+    },
+    {
+      "item": "minecraft:golden_carrot"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "testmod:weed_muffin"
+  }
+}

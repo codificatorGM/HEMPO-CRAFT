@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_paper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:paper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_purple_haze_bud": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:purple_haze_bud"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:purple_haze_blunt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weed_leaf": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:weed_leaf"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_purple_haze_bud",
+      "has_paper",
+      "has_weed_leaf",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:purple_haze_blunt"
+    ]
+  },
+  "sends_telemetry_event": false
+}

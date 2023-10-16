@@ -70,7 +70,6 @@ public class SativaCropBlock extends CropBlock {
     public boolean canSustainPlant(BlockState state, BlockGetter world, BlockPos pos, Direction facing, IPlantable plantable) {
         return super.mayPlaceOn(state, world, pos);
     }
-
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         return super.canSurvive(pState, pLevel, pPos) || (pLevel.getBlockState(pPos.below(1)).is(this) &&
                 pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 6);

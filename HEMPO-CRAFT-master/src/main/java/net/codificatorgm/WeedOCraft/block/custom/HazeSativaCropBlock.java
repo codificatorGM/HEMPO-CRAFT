@@ -80,7 +80,6 @@ import java.awt.*;
             return super.canSurvive(pState, pLevel, pPos) || (pLevel.getBlockState(pPos.below(1)).is(this) &&
                     pLevel.getBlockState(pPos.below(1)).getValue(AGE) == 6);
         }
-
         @Override
         public void growCrops(Level pLevel, BlockPos pPos, BlockState pState) {
             int nextAge = this.getAge(pState) + this.getBonemealAgeIncrease(pLevel);

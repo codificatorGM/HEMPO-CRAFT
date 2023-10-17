@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "G": {
+      "item": "minecraft:purple_stained_glass"
+    }
+  },
+  "pattern": [
+    "AAG"
+  ],
+  "result": {
+    "item": "testmod:piper"
+  },
+  "show_notification": true
+}

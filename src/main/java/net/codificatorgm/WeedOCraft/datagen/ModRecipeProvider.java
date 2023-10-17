@@ -172,6 +172,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_BLOCK), has(Items.IRON_BLOCK))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BUBBLER.get(), 1)
+                .pattern("I ")
+                .pattern("I ")
+                .pattern("IR")
+                .define('I', Items.GLASS)
+                .unlockedBy(getHasName(Items.GLASS), has(Items.GLASS))
+                .define('R', Items.IRON_INGOT)
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GROWTH_LIGHT.get(), 2)
                 .pattern("###")
                 .pattern("WGW")

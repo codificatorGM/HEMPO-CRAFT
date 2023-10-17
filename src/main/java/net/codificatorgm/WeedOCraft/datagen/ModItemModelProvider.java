@@ -40,6 +40,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WEED_BROWNIE);
         simpleItem(ModItems.GRAPEFRUIT_SODA);
         simpleItem(ModItems.LEMON_SODA);
+        simpleItem(ModItems.BUBBLER);
 
 
         simpleBlockItem(ModBlocks.HEMP_DOOR);

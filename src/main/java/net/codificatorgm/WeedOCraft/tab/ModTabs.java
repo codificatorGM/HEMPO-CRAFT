@@ -57,6 +57,7 @@ public class ModTabs {
                         event.accept(ModBlocks.PIPE.get());
                         event.accept(ModBlocks.WEEDMATIC.get());
                         event.accept(ModBlocks.ROLLING_MACHINE.get());
+                        event.accept(ModItems.BUBBLER.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

@@ -38,8 +38,9 @@ public class ModItems {
     public static final RegistryObject<Item> CANNAMILK = ITEMS.register("cannamilk",
             () -> new CannaMilk(new Item.Properties().durability(2)));
 
-    public static final RegistryObject<Item> COOKED_EGG = ITEMS.register("cooked_egg",
-            () -> new Item(new Item.Properties().food(Foods.BAKED_POTATO)));
+
+    public static final RegistryObject<Item> BUBBLER = ITEMS.register("bubbler",
+            () -> new Item(new Item.Properties().durability(6)));
 
     public static final RegistryObject<Item> WEED_COOKIE = ITEMS.register("weed_cookie",
             () -> new Item(new Item.Properties().food(ModFoods.WEED_COOKIE)));

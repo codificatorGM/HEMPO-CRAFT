@@ -18,6 +18,11 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, TestMod.MOD_ID);
     public static final RegistryObject<Item> WEED_LEAF = ITEMS.register("weed_leaf",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BUBBLER = ITEMS.register("bubbler",
+            () -> new Bubbler(new Item.Properties()));
+
+    public static final RegistryObject<Item> PIPER = ITEMS.register("piper",
+            () -> new Pipe(new Item.Properties()));
     public static final RegistryObject<Item> JOINT = ITEMS.register("joint",
             () -> new Joint(new Item.Properties().durability(4)));
     public static final RegistryObject<Item> WEED_BUD = ITEMS.register("weed_bud",

@@ -110,6 +110,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.GRINDER.get());
         this.dropSelf(ModBlocks.WEEDMATIC.get());
         this.dropSelf(ModBlocks.REINFORCED_HEMP_BLOCK.get());
+        this.dropSelf(ModBlocks.ROLLING_MACHINE.get());
 
 
         this.add(ModBlocks.PIPE.get(),
@@ -120,7 +121,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.BONG.get(),
                 block -> createSilkTouchOnlyTable(ModBlocks.BONG.get()));
-
 
         this.add(ModBlocks.HEMP_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.HEMP_SLAB.get()));
